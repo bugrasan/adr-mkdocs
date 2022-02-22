@@ -1,0 +1,55 @@
+site_name: ADR MKDOCS sandbox
+
+theme:
+#  name: readthedocs
+  name: material
+  #font: false   # disable loading of Google Fonts
+  #logo: assets/logo.png
+  #favicon: assets/images/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking     # updates the URL bar
+    - navigation.tabs         # first level menu on top
+    - navigation.tabs.sticky
+#    - navigation.indexes
+    - navigation.sections
+    - navigation.top          # back to top button
+
+nav:
+  - Home: 'README.md'
+  - Archtectural Decisions:
+    - ...
+  - Categories: 'categories.md'
+  - License: 'license.md'
+  - Export: '/print_page/'
+
+markdown_extensions:
+  - meta                  # Front Matter
+  - tables                # Tables/DataTables
+  - footnotes             # Footnotes
+  - abbr                  # Abbreviations
+  - pymdownx.snippets     # Abbreviations
+  - admonition            # Admonition
+  - pymdownx.details      # Admonition
+  - pymdownx.superfences: # Admonition & Diagrams
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+plugins:
+  - tags:
+      tags_file: categories.md    # generate linkable tags/taxonomy in front matter
+  - search
+  - awesome-pages
+  - with-pdf:
+      author: none
+      copyright: none
+  - print-site
+#  - privacy:                     # **PREMIUM**: needs to be at the end of plugins list
+#      download: !ENV [DOWNLOAD, false]
+
+copyright: Copyright &copy; 2021 - 2022 user
+
+
