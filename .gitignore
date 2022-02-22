@@ -6,6 +6,6 @@ pyvenv.cfg
 bin
 lib
 # on windows
-Site
+Scripts
 Lib
 
