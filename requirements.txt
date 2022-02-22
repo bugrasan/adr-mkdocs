@@ -1,0 +1,11 @@
+## Requirements w/o specific version
+mkdocs
+mkdocs-material
+mkdocs-awesome-pages-plugin
+adr-tools-python
+
+## Optional requirements
+# uncomment to enable them
+#mkdocs-with-pdf
+#mkdocs-print-site-plugin
+

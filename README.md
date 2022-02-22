@@ -57,3 +57,9 @@ pip3 install mkdocs-print-site-plugin
 
 
 ```
+
+## References 
+
+- https://github.com/elastisys/compliantkubernetes/blob/main/mkdocs.yml
+	- https://elastisys.io/compliantkubernetes/adr/0000-use-markdown-architectural-decision-records/
+

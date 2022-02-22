@@ -1,19 +1,29 @@
 site_name: ADR MKDOCS sandbox
+#site_url: https://www...
+site_description: >-
+  multi line
+  description
+site_author: author
+copyright: Copyright &copy; 2021 - 2022 user
+
+#repo_url: https://github.com/...
+
+strict: true                      # warns will stop processing
 
 theme:
-#  name: readthedocs
   name: material
-  #font: false   # disable loading of Google Fonts
-  #logo: assets/logo.png
+  #font: false                    # disable loading of Google Fonts
+  #logo: assets/images/logo.png
   #favicon: assets/images/favicon.png
+  custom_dir: overrides           # theme override directory
   features:
     - navigation.instant
-    - navigation.tracking     # updates the URL bar
-    - navigation.tabs         # first level menu on top
+    - navigation.tracking         # updates the URL bar
+    - navigation.tabs             # first level menu on top
     - navigation.tabs.sticky
 #    - navigation.indexes
     - navigation.sections
-    - navigation.top          # back to top button
+    - navigation.top              # back to top button
 
 nav:
   - Home: 'README.md'
@@ -23,19 +33,30 @@ nav:
   - License: 'license.md'
   - Export: '/print_page/'
 
+# mostly recommended extensions by Material Theme
 markdown_extensions:
-  - meta                  # Front Matter
-  - tables                # Tables/DataTables
-  - footnotes             # Footnotes
-  - abbr                  # Abbreviations
-  - pymdownx.snippets     # Abbreviations
-  - admonition            # Admonition
-  - pymdownx.details      # Admonition
-  - pymdownx.superfences: # Admonition & Diagrams
+  - meta                          # Front Matter
+  - attr_list
+  - def_list
+  - tables                        # Tables/DataTables
+  - footnotes                     # Footnotes
+  - abbr                          # Abbreviations
+  - admonition                    # Admonition
+  - toc:
+      permalink: true
+
+  # python markdown extensions
+  - pymdownx.snippets             # Abbreviations
+  - pymdownx.details              # Admonition
+  - pymdownx.superfences:         # Admonition & Diagrams
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:            # def_list
+      custom_checkbox: true
+  - pymdownx.betterem:
+      smart_enable: all
 
 
 plugins:
@@ -49,7 +70,5 @@ plugins:
   - print-site
 #  - privacy:                     # **PREMIUM**: needs to be at the end of plugins list
 #      download: !ENV [DOWNLOAD, false]
-
-copyright: Copyright &copy; 2021 - 2022 user
 
 

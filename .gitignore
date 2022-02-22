@@ -1,2 +1,11 @@
+# mkdocs generated site files
 site
+# python virtualenv
+pyvenv.cfg
+# on linux
+bin
+lib
+# on windows
+Site
+Lib
 
